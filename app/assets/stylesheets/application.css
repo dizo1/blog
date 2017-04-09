@@ -15,3 +15,23 @@
  */
  @import "materialize";
  @import "bootstrap";
+
+ a{
+ 	text-decoration: none;
+ }
+ .ct{
+ 	text-align: center;
+ }
+
+ form {
+    display: inline-block;
+    text-align: left;    
+}
+
+body {
+    text-align: center; 
+}
+table{
+	display: inline-block;
+    text-align: left;
+}

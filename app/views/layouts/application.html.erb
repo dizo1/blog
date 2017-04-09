@@ -19,23 +19,24 @@
           <a class="brand" href="#">Rails Blog</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <!--<li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#contact">Contact</a></li>-->
+              <% if user_signed_in? %>
+				<h4 class="txtd">Logged in as <strong><%= current_user.email %></strong>.</h4>
+				<h4><%= link_to 'Edit Profile', edit_user_registration_path %> | 
+				<%= link_to "Logout", destroy_user_session_path, method: :delete %></h4>
+				<% else %>
+				<h4 class="pull-right"><%= link_to "Sign up", new_user_registration_path %> |
+				<%= link_to "Login", new_user_session_path %></h4>
+
+<% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-<% if user_signed_in? %>
-Logged in as <strong><%= current_user.email %></strong>.
-<%= link_to 'Edit Profile', edit_user_registration_path %> | 
-<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-<% else %>
-<%= link_to "Sign up", new_user_registration_path %> |
-<%= link_to "Login", new_user_session_path %>
 
-<% end %>
 
 <%= yield %>
 

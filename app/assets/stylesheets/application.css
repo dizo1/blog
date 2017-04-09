@@ -19,8 +19,13 @@
  a{
  	text-decoration: none;
  }
+ .txtd{
+ 	color: #fff;
+ 	float: right;
+ 	
+ }
  .down{
- 	padding-top: 45px;
+ 	padding-top: 70px;
  }
  .ct{
  	text-align: center;

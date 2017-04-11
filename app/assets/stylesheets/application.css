@@ -13,11 +13,20 @@
  *= require_tree .
  *= require_self
  */
- @import "materialize";
- @import "bootstrap";
 
  a{
  	text-decoration: none;
+ }
+ .brand{ float: left; }
+ .usTop{
+ 	margin-top: 11px;
+ 	color: #fff;
+ }
+ .nav{ float: right; }
+ .nav li{
+ 	float: right;
+ 	margin-left: 10px;
+ 	margin-right: 10px;
  }
  .txtd{
  	color: #fff;
